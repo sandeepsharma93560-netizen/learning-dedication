@@ -317,5 +317,36 @@ header nav ul li a:hover { color: #218838; } /* Darker Green Hover */
         font-size: 0.95rem;
     }
 }
+/* ===== FORCE DESKTOP LAYOUT ON MOBILE ===== */
+@media only screen and (max-width: 768px) {
+    body, html {
+        width: 100%;
+        overflow-x: auto; /* horizontal scroll agar required ho */
+    }
+
+    .container, .hero-content, .logo-container, .blog-card, .card {
+        display: flex !important;  /* force flex layout */
+        flex-direction: row !important; /* row layout like desktop */
+        flex-wrap: nowrap !important; /* no wrap */
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        width: auto !important;
+    }
+
+    .hero-content img, .blog-card img, .card img {
+        max-width: 300px; /* image ko fit karne ke liye adjust */
+        height: auto;
+    }
+
+    .logo-text-container, .hero-content div, .blog-card div {
+        flex: 1 1 auto;
+    }
+
+    /* Buttons and text */
+    h1, h2, h3, p {
+        font-size: 1rem !important; /* text scale */
+    }
+}
+
 
 
