@@ -34,7 +34,6 @@ header h1 {
     font-size: 1.8rem;
 }
 
-/* LOGO NORMAL LOOK */
 header .logo img {
     height: 45px;
     width: auto;
@@ -61,7 +60,7 @@ header nav ul li a:hover {
     color: #218838;
 }
 
-/* ===== Hero Section ===== */
+/* ===== HERO ===== */
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -75,7 +74,7 @@ header nav ul li a:hover {
 
 .hero-content {
     display: flex;
-    flex-direction: row; /* ALWAYS ROW */
+    flex-direction: row !important;   /* ALWAYS ROW */
     align-items: center;
     gap: 30px;
 }
@@ -124,11 +123,10 @@ header nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-/* ===== ABOUT SECTION ===== */
-
+/* ===== ABOUT ===== */
 .about {
     display: flex;
-    flex-direction: row !important;  
+    flex-direction: row !important;   /* ALWAYS ROW */
     gap: 25px;
     padding: 50px 25px;
     max-width: 1100px;
@@ -161,7 +159,7 @@ header nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* ===== Blog Cards ===== */
+/* ===== BLOG ===== */
 .blog {
     padding: 60px 20px;
     background: #fafafa;
@@ -176,7 +174,7 @@ header nav ul li a:hover {
 
 .blog-card {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row !important;   /* ALWAYS ROW */
     gap: 20px;
     background: #fff;
     padding: 25px;
@@ -206,7 +204,7 @@ header nav ul li a:hover {
 
 .logo-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;   /* ALWAYS ROW */
     align-items: center;
     gap: 15px;
     padding: 14px 20px;
@@ -233,7 +231,7 @@ header nav ul li a:hover {
     text-align: center;
 }
 
-/* ===== FINAL MOBILE VERSION ===== */
+/* ===== MOBILE FIXED ROW VERSION ===== */
 @media (max-width: 768px) {
 
     header .container {
@@ -245,20 +243,19 @@ header nav ul li a:hover {
         gap: 10px;
     }
 
-    /* HERO */
+    .hero-content {
+        flex-direction: row !important;  
+        gap: 15px;
+    }
+
     .hero-content img {
         width: 130px;
     }
 
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
-    .hero-text h2 {
-        font-size: 1rem;
-    }
-
-    /* ABOUT ALWAYS ROW */
     .about {
         flex-direction: row !important;
         gap: 15px;
@@ -269,22 +266,13 @@ header nav ul li a:hover {
         width: 120px;
     }
 
-    .about-text h2 {
-        font-size: 1.4rem;
-    }
-
-    .about-text h3 {
-        font-size: 1rem;
-    }
-
-    .about-text p {
-        font-size: 0.9rem;
-    }
-
-    /* BLOG CARDS */
     .blog-card {
-        padding: 20px;
+        flex-direction: row !important;
+        padding: 18px;
         gap: 12px;
     }
 
-    .b
+    .blog-card img {
+        width: 120px;
+    }
+}
